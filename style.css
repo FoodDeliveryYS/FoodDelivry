@@ -1,8 +1,14 @@
+body{
+  background-color: #F3BC2E;
+  background-image: url(/IMG/food-delivery-online-on-phone-orange-background-illustration-fastfood-design-concept-business-shop-promotion-transport-to-home-free-vector.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
 .topnav {
     overflow: hidden;
-    background-color: #e9e9e9;
+    background-color: #f8a20f;
   }
-  
+
   .topnav a {
     float:left;
     display: block;
@@ -12,24 +18,24 @@
     text-decoration: none;
     font-size: 17px;
   }
-  
+
   .topnav a:hover {
     background-color: #ddd;
     color: black;
   }
-  
+
 
   .topnav .search-container {
     float: right;
   }
-  
+
   .topnav input[type=text] {
     padding: 6px;
     margin-top: 8px;
     font-size: 17px;
     border: none;
   }
-  
+
   .topnav .search-container button {
     float: right;
     padding: 6px 10px;
@@ -40,11 +46,11 @@
     border: none;
     cursor: pointer;
   }
-  
+
   .topnav .search-container button:hover {
     background: #ccc;
   }
-  
+
   @media screen and (max-width: 600px) {
     .topnav .search-container {
       float: none;
@@ -58,6 +64,20 @@
       padding: 14px;
     }
     .topnav input[type=text] {
-      border: 1px solid #ccc;  
+      border: 1px solid #ccc;
     }
+  }
+  input{
+    text-align: center;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-top: 5%;
+    margin-left: 35%;
+  }
+  #position{
+    padding: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #f8a20f;
   }

@@ -318,8 +318,9 @@ $('#resto').append(`<h1 id=${e.id}  class='' >${e.name}</h1>`)
 $('#0').click( function(e){
 
     $('#resto').css("display", "none");
-    each(restos[0].menu , function(element){
+    each(restos[0].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
 
