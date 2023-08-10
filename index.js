@@ -314,14 +314,15 @@ $('#resto').append(`<h1 id=${e.id}  class='' >${e.name}</h1>`)
    $('#resto').append(`<h2>${e.adresse}</h2>`)
         $('#resto').append('<br>')
 })
+var panier=[]
 $('#retour').append(`<button id=ret>retour</button>`)
+
 $('#ret').click(function(){
     $('#menu').css("display", "none");
     $('#resto').css("display", "block");
     $('#retour').css("display", "none");
      $('#menu').empty()
-   
-})
+   })
 
 $('#0').click( function(e){
     $('#retour').css("display", "block");
@@ -333,10 +334,17 @@ $('#0').click( function(e){
         $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
-
+ $(`#b${i}`).click(function (e){
+        panier.push(element.name)
+        panier.push(element.price)
+        console.log(panier)
     })
-
+   
+ })
+       
 })
+
+
 
 $('#1').click( function(e){
     $('#retour').css("display", "block");
@@ -349,7 +357,11 @@ $('#1').click( function(e){
         $('#menu').append(`<button id=bb${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
-
+        $(`#bb${i}`).click(function (e){
+            panier.push(element.name)
+            panier.push(element.price)
+            console.log(panier)
+        })
     })
 })
     $('#2').click( function(e){
@@ -362,7 +374,11 @@ $('#1').click( function(e){
             $('#menu').append(`<button id=bbb${i}>ajouter au panier</button>`)
             $('#menu').append(`<h2>${element.price}</h2>`)
             $('#menu').append(`<img src=${element.image}>`)
-    
+            $(`#bbb${i}`).click(function (e){
+                panier.push(element.name)
+                panier.push(element.price)
+                console.log(panier)
+            })
         })
 
 })
@@ -379,7 +395,11 @@ $('#3').click( function(e){
 
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
-
+        $(`#bbbb${i}`).click(function (e){
+            panier.push(element.name)
+            panier.push(element.price)
+            console.log(panier)
+        })
     })
 })
 
@@ -395,7 +415,11 @@ $('#4').click( function(e){
 
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
-
+        $(`#bbbbb${i}`).click(function (e){
+            panier.push(element.name)
+            panier.push(element.price)
+            console.log(panier)
+        })
     })
 })
     each(restos,function(e){ 
@@ -403,3 +427,4 @@ $('#4').click( function(e){
 $('#categ').append(`<h1>${e.category}</h1>`)
         $('#resto').append('<br>')  
 })
+
