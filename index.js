@@ -331,8 +331,9 @@ $('#0').click( function(e){
 $('#1').click( function(e){
 
     $('#resto').css("display", "none");
-    each(restos[1].menu , function(element){
+    each(restos[1].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
 
@@ -341,8 +342,9 @@ $('#1').click( function(e){
     $('#2').click( function(e){
 
         $('#resto').css("display", "none");
-        each(restos[2].menu , function(element){
+        each(restos[2].menu , function(element,i){
             $('#menu').append(`<h1>${element.name}</h1>`)
+            $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
             $('#menu').append(`<h2>${element.price}</h2>`)
             $('#menu').append(`<img src=${element.image}>`)
     
@@ -353,8 +355,10 @@ $('#1').click( function(e){
 $('#3').click( function(e){
 
     $('#resto').css("display", "none");
-    each(restos[3].menu , function(element){
+    each(restos[3].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
+
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
 
@@ -364,8 +368,10 @@ $('#3').click( function(e){
 $('#4').click( function(e){
 
     $('#resto').css("display", "none");
-    each(restos[4].menu , function(element){
+    each(restos[4].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
+
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
 
