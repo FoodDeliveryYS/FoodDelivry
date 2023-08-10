@@ -252,15 +252,15 @@ var Crepe = [{
     img : ''
 },     
 ]
-var restos=[{name:'baguette & baguette',adresse:'menzeh 6',menu:sandwiches,category:'sandwiches', 
+var restos=[{name:'baguette & baguette',id:0,adresse:'menzeh 6',menu:sandwiches,category:'sandwiches', 
 img : ''},
-{name:'paradice',adresse:'lac ',menu:iceCream,category:'ice cream', 
+{name:'paradice',id:1,adresse:'lac ',menu:iceCream,category:'ice cream', 
 img : ''},
-{name:'fruit land',adresse:'Ariana ',menu:jus,category:'jus', 
+{name:'fruit land',id:2,adresse:'Ariana ',menu:jus,category:'jus', 
 img : ''},
-{name:'popolare',adresse:'Nasr',menu:pizza,category:'pizza', 
+{name:'popolare',id:3,adresse:'Nasr',menu:pizza,category:'pizza', 
 img : ''},
-{name:'Crepe Factory',adresse:'menzeh 9',menu:Crepe,category:'crepe', 
+{name:'Crepe Factory',id:4,adresse:'menzeh 9',menu:Crepe,category:'crepe', 
 img : ''}]
 function each(coll, f) {
     if (Array.isArray(coll)) {
@@ -306,7 +306,7 @@ function each(coll, f) {
 
     each(restos,function(e){ 
 
-$('#resto').append(`<h1>${e.name}</h1>`)
+$('#resto').append(`<h1 id=${e.id}  class='' >${e.name}</h1>`)
         $('#resto').append('<br>')
       
     $('#resto').append(`<h2>${e.category}</h2>`)
@@ -314,13 +314,23 @@ $('#resto').append(`<h1>${e.name}</h1>`)
    $('#resto').append(`<h2>${e.adresse}</h2>`)
         $('#resto').append('<br>')
 })
-$('#resto').
+$('#0').click(function(){
+    each(restos[0].menu , function(element){
+        $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<h2>${element.price}</h2>`)
+        $('#menu').append(`<img src=${element.image}>`)
+    
+
+        console.log(element)
+
+    })
+    
+
+})
 
 
     each(restos,function(e){ 
            
 $('#categ').append(`<h1>${e.category}</h1>`)
-        $('#resto').append('<br>')
-      
-   
+        $('#resto').append('<br>')  
 })
