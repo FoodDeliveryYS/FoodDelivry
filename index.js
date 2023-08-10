@@ -314,21 +314,62 @@ $('#resto').append(`<h1 id=${e.id}  class='' >${e.name}</h1>`)
    $('#resto').append(`<h2>${e.adresse}</h2>`)
         $('#resto').append('<br>')
 })
-$('#0').click(function(){
+
+$('#0').click( function(e){
+
+    $('#resto').css("display", "none");
     each(restos[0].menu , function(element){
         $('#menu').append(`<h1>${element.name}</h1>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
-    
-
-        console.log(element)
 
     })
-    
 
 })
 
+$('#1').click( function(e){
 
+    $('#resto').css("display", "none");
+    each(restos[1].menu , function(element){
+        $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<h2>${element.price}</h2>`)
+        $('#menu').append(`<img src=${element.image}>`)
+
+    })
+})
+    $('#2').click( function(e){
+
+        $('#resto').css("display", "none");
+        each(restos[2].menu , function(element){
+            $('#menu').append(`<h1>${element.name}</h1>`)
+            $('#menu').append(`<h2>${element.price}</h2>`)
+            $('#menu').append(`<img src=${element.image}>`)
+    
+        })
+
+})
+
+$('#3').click( function(e){
+
+    $('#resto').css("display", "none");
+    each(restos[3].menu , function(element){
+        $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<h2>${element.price}</h2>`)
+        $('#menu').append(`<img src=${element.image}>`)
+
+    })
+})
+
+$('#4').click( function(e){
+
+    $('#resto').css("display", "none");
+    each(restos[4].menu , function(element){
+        $('#menu').append(`<h1>${element.name}</h1>`)
+        $('#menu').append(`<h2>${element.price}</h2>`)
+        $('#menu').append(`<img src=${element.image}>`)
+
+    })
+})
     each(restos,function(e){ 
            
 $('#categ').append(`<h1>${e.category}</h1>`)
