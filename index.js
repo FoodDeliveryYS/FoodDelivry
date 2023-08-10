@@ -92,109 +92,109 @@ price:3500,
 image:''}]
 
 var pizza=[{
-    type : 'Margerita' ,
+    name : 'Margerita' ,
     size : 'S',
     price : 5000 , 
     img : ''
 },
 {
-    type : 'Margerita' ,
+    name : 'Margerita' ,
     size : 'M',
     price : 7000 , 
     img : ''
 },
 {
-type : 'Margherita' ,
+name : 'Margherita' ,
     size : 'L',
     price : 17000 ,
     img : '' 
 },
 {
-    type : 'Siciliana' ,
+    name : 'Siciliana' ,
     size : 'S',
     price : 6500 , 
     img : ''
 },
 {
-    type : 'Siciliana' ,
+    name : 'Siciliana' ,
     size : 'M',
     price : 9500 , 
     img : ''
 },
 {
-type : 'Siciliana' ,
+name : 'Siciliana' ,
     size : 'L',
     price : 19000 , 
     img : ''
 },
 {
-    type : 'Tonno' ,
+    name : 'Tonno' ,
     size : 'S',
     price : 6500 , 
     img : ''
 },
 {
-    type : 'Tonno' ,
+    name : 'Tonno' ,
     size : 'M',
     price : 9500 , 
     img : ''
 },
 {
-type : 'Tonno' ,
+name : 'Tonno' ,
     size : 'L',
     price : 19000 , 
     img : ''
 },
 {
-    type : 'Regina' ,
+    name : 'Regina' ,
     size : 'S',
     price : 6500 , 
     img : ''
 },
 {
-    type : 'Regina' ,
+    name : 'Regina' ,
     size : 'M',
     price : 9500 , 
     img : ''
 },
 {
-type : 'Regina' ,
+name : 'Regina' ,
     size : 'L',
     price : 19000 , 
     img : ''
 },
 {
-    type : 'Peperoni' ,
+    name : 'Peperoni' ,
     size : 'S',
     price : 8000 , 
     img : ''
 },
 {
-    type : 'Peperoni' ,
+    name : 'Peperoni' ,
     size : 'M',
     price : 11000 , 
     img : ''
 },
 {
-type : 'Peperoni' ,
+name : 'Peperoni' ,
     size : 'L',
     price : 22000 , 
     img : ''
 },
 {
-    type : 'Frutti Di Mare' ,
+    name : 'Frutti Di Mare' ,
     size : 'S',
     price : 16000 , 
     img : ''
 },
 {
-    type : 'Frutti Di Mare' ,
+    name : 'Frutti Di Mare' ,
     size : 'M',
     price : 22000 , 
     img : ''
 },
 {
-    type : 'Frutti Di Mare' ,
+    name : 'Frutti Di Mare' ,
     size : 'L',
     price : 39000 , 
     img : ''
@@ -253,7 +253,7 @@ var Crepe = [{
 },     
 ]
 var restos=[{name:'baguette & baguette',id:0,adresse:'menzeh 6',menu:sandwiches,category:'sandwiches', 
-img : ''},
+img : '../IMG/restaurant/baguette.jpg'},
 {name:'paradice',id:1,adresse:'lac ',menu:iceCream,category:'ice cream', 
 img : ''},
 {name:'fruit land',id:2,adresse:'Ariana ',menu:jus,category:'jus', 
@@ -311,10 +311,11 @@ $('#resto').append(`<h1 id=${e.id}  class='' >${e.name}</h1>`)
       
     $('#resto').append(`<h2>${e.category}</h2>`)
   $('#resto').append('<br>')
+  $('#resto').append(`<img src=${e.image}>`)
    $('#resto').append(`<h2>${e.adresse}</h2>`)
         $('#resto').append('<br>')
 })
-var panier=[]
+
 $('#retour').append(`<button id=ret>retour</button>`)
 
 $('#ret').click(function(){
@@ -334,10 +335,38 @@ $('#0').click( function(e){
         $('#menu').append(`<button id=b${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
- $(`#b${i}`).click(function (e){
-        panier.push(element.name)
-        panier.push(element.price)
-        console.log(panier)
+  var count =1
+        $(`#b${i}`).click(function (e){
+  if(count===1){
+   var name=element.name;
+   
+    var res=[];
+    res.push(name)
+    res.push(element.price)
+    
+    res.push('x',count)
+                localStorage[i]=[res]
+
+count=count+1
+
+  }
+  else if(count!==1){
+    var name=element.name;
+   
+    var res=[];
+    res.push(name)
+    res.push(element.price)
+    
+    res.push('x',count)
+                localStorage[i]=[res]
+
+count=count+1
+
+  }
+   
+   
+ 
+           
     })
    
  })
@@ -357,10 +386,37 @@ $('#1').click( function(e){
         $('#menu').append(`<button id=bb${i}>ajouter au panier</button>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
+        var count =1
         $(`#bb${i}`).click(function (e){
-            panier.push(element.name)
-            panier.push(element.price)
-            console.log(panier)
+            if(count===1){
+                var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+               else if(count!==1){
+                 var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+                
+                
+              
         })
     })
 })
@@ -374,10 +430,37 @@ $('#1').click( function(e){
             $('#menu').append(`<button id=bbb${i}>ajouter au panier</button>`)
             $('#menu').append(`<h2>${element.price}</h2>`)
             $('#menu').append(`<img src=${element.image}>`)
+            var count =1
             $(`#bbb${i}`).click(function (e){
-                panier.push(element.name)
-                panier.push(element.price)
-                console.log(panier)
+                if(count===1){
+                    var name=element.name;
+                    
+                     var res=[];
+                     res.push(name)
+                     res.push(element.price)
+                     
+                     res.push('x',count)
+                                 localStorage[i]=[res]
+                 
+                 count=count+1
+                 
+                   }
+                   else if(count!==1){
+                     var name=element.name;
+                    
+                     var res=[];
+                     res.push(name)
+                     res.push(element.price)
+                     
+                     res.push('x',count)
+                                 localStorage[i]=[res]
+                 
+                 count=count+1
+                 
+                   }
+                    
+                    
+                  
             })
         })
 
@@ -392,13 +475,41 @@ $('#3').click( function(e){
     each(restos[3].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
         $('#menu').append(`<button id=bbbb${i}>ajouter au panier</button>`)
-
+        $('#menu').append(`<h2>${element.size}</h2>`)
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
+        var count =1
         $(`#bbbb${i}`).click(function (e){
-            panier.push(element.name)
-            panier.push(element.price)
-            console.log(panier)
+
+            if(count===1){
+                var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+               else if(count!==1){
+                 var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+                
+                
+              
         })
     })
 })
@@ -412,19 +523,152 @@ $('#4').click( function(e){
     each(restos[4].menu , function(element,i){
         $('#menu').append(`<h1>${element.name}</h1>`)
         $('#menu').append(`<button id=bbbbb${i}>ajouter au panier</button>`)
-
+        
         $('#menu').append(`<h2>${element.price}</h2>`)
         $('#menu').append(`<img src=${element.image}>`)
+        var count =1
         $(`#bbbbb${i}`).click(function (e){
-            panier.push(element.name)
-            panier.push(element.price)
-            console.log(panier)
+         
+            if(count===1){
+                var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+               else if(count!==1){
+                 var name=element.name;
+                
+                 var res=[];
+                 res.push(name)
+                 res.push(element.price)
+                 
+                 res.push('x',count)
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+                
+                
+              
         })
     })
 })
-    each(restos,function(e){ 
+   
+each(restos,function(e,i){ 
            
-$('#categ').append(`<h1>${e.category}</h1>`)
+$('#categ').append(`<h1 id=c${i}>${e.category}</h1>`)
         $('#resto').append('<br>')  
 })
+
+$('#c0').click(function(){
+    $('#back').css("display", "block");
+    $('#categ').css("display", "none");
+    $('#menuu').css("display", "block");
+each(sandwiches,function(e,i){
+    $('#menuu').append(`<h1>${e.name}</h1>`)
+    $('#menuu').append(`<h1>${e.price}</h1>`)
+    $('#menuu').append(`<img src=${e.image}>`)
+})
+})
+$('#c1').click(function(){
+    $('#back').css("display", "block");
+    $('#categ').css("display", "none");
+    $('#menuu').css("display", "block");
+    each(iceCream,function(e,i){
+        $('#menuu').append(`<h1>${e.name}</h1>`)
+        $('#menuu').append(`<h1>${e.price}</h1>`)
+        $('#menuu').append(`<img src=${e.image}>`)
+    })
+    })
+    $('#c2').click(function(){
+        $('#back').css("display", "block");
+        $('#categ').css("display", "none");
+        $('#menuu').css("display", "block");
+        each(jus,function(e,i){
+            
+            $('#menuu').append(`<h1>${e.name}</h1>`)
+            $('#menuu').append(`<h1>${e.price}</h1>`)
+            $('#menuu').append(`<img src=${e.image}>`)
+        })
+        })
+        $('#c3').click(function(){
+            $('#back').css("display", "block");
+            $('#categ').css("display", "none");
+            $('#menuu').css("display", "block");
+            each(pizza,function(e,i){
+                $('#menuu').append(`<h1>${e.name}</h1>`)
+                $('#menuu').append(`<h1>${e.price}</h1>`)
+                $('#menuu').append(`<img src=${e.image}>`)
+            })
+            })
+            $('#c4').click(function(){
+                $('#back').css("display", "block");
+                $('#categ').css("display", "none");
+                $('#menuu').css("display", "block");
+                each(Crepe,function(e,i){
+                    $('#menuu').append(`<h1>${e.name}</h1>`)
+                    $('#menuu').append(`<h1>${e.price}</h1>`)
+                    $('#menuu').append(`<img src=${e.image}>`)
+                })
+                })
+
+                $('#back').append(`<button id=backe>back</button>`)
+                $('#back').css("display", "none");
+$('#backe').click(function(){
+    $('#categ').css("display", "block");
+    $('#menuu').css("display", "none");
+    $('#menuu').empty()
+    $('#back').css("display", "none");
+   })
+
+   var keys=Object.keys(localStorage) 
+   var values=Object.values(localStorage)
+   
+   var count=0
+each(values,function(e,i){ 
+    var res=e.split(',')
+$('#cart').append(`<h1 id=h${i}>${res[0]}</h1>`) 
+$('#cart').append(`<h2 id=hh${i}>${res[1]}</h2>`) 
+$('#cart').append(`<h2 id=hh${i}>${res[2]+res[3]}</h2>`)
+$('#cart').append(`<button id=s${i}>remove</button>`)
+console.log(i)
+
+console.log(res)
+$(`#s${i}`).click(function (e){
+    
+    if(i===0 || count===0){
+    keys.splice(i, 1)
+
+    values.splice(i, 1)
+ 
+    $(`#h${i}`).css("display", "none");
+    $(`#hh${i}`).css("display", "none");
+    $(`#s${i}`).css("display", "none");
+    
+count=count+1    
+console.log('count===0',keys)   
+}
+
+else if(count!==0){
+    keys.splice(i-1, 1)
+
+    values.splice(i-1, 1)
+   
+    $(`#h${i}`).css("display", "none");
+    $(`#hh${i}`).css("display", "none");
+    $(`#s${i}`).css("display", "none");
+    console.log('count!==0',keys)  
+}
+})
+})
+  
+
 
