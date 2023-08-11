@@ -852,7 +852,23 @@ else{
     
 })
 $(`#all`).append(`<h2 >Total=${total}</h2>`)
-alert('total to pay is '+total)
+
+$(`#clt`).append(`<input placeholder=write your name please id=in1 >`)
+$(`#clt`).append(`<input placeholder=write your adresse please id=in2>`)
+$(`#clt`).append(`<input placeholder=write your phone number please id=in3>`)
+$('#clt').append(`<button id=client >confirme</button>`)
+$(`#cart`).css("display", "none");
+$("#client").click(function(){
+   
+    console.log('hello')
+    var name=$(`#in1`).val()
+   
+    var adresse=$(`#in2`).val()
+    var phone=$(`#in3`).val()
+    $(`#clt`).css("display", "none");
+    $(`#all`).css("display", "none");
+    $(`#last`).append(`<h2>thank you mister/miss ${name} ,the delivry guy will call you on the ${phone} when he arrive to your location ${adresse}   </h2>`)
+})
 })
 
 
@@ -860,4 +876,6 @@ $(`#remove`).click(function(){
     localStorage.clear()
     $(`#cart`).css("display", "none");
 })
+
+
 
