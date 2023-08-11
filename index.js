@@ -95,109 +95,109 @@ var pizza=[{
     name : 'Margerita' ,
     size : 'S',
     price : 5000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Margerita' ,
     size : 'M',
     price : 7000 , 
-    img : ''
+    image : ''
 },
 {
 name : 'Margherita' ,
     size : 'L',
     price : 17000 ,
-    img : '' 
+    image : '' 
 },
 {
     name : 'Siciliana' ,
     size : 'S',
     price : 6500 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Siciliana' ,
     size : 'M',
     price : 9500 , 
-    img : ''
+    image : ''
 },
 {
 name : 'Siciliana' ,
     size : 'L',
     price : 19000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Tonno' ,
     size : 'S',
     price : 6500 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Tonno' ,
     size : 'M',
     price : 9500 , 
-    img : ''
+    image : ''
 },
 {
 name : 'Tonno' ,
     size : 'L',
     price : 19000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Regina' ,
     size : 'S',
     price : 6500 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Regina' ,
     size : 'M',
     price : 9500 , 
-    img : ''
+    image : ''
 },
 {
 name : 'Regina' ,
     size : 'L',
     price : 19000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Peperoni' ,
     size : 'S',
     price : 8000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Peperoni' ,
     size : 'M',
     price : 11000 , 
-    img : ''
+    image : ''
 },
 {
 name : 'Peperoni' ,
     size : 'L',
     price : 22000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Frutti Di Mare' ,
     size : 'S',
     price : 16000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Frutti Di Mare' ,
     size : 'M',
     price : 22000 , 
-    img : ''
+    image : ''
 },
 {
     name : 'Frutti Di Mare' ,
     size : 'L',
     price : 39000 , 
-    img : ''
+    image : ''
 }]
 
 
@@ -206,62 +206,62 @@ var Crepe = [{
     type : 'Sweet crepes',
     name : 'Nutella', 
     price : 8000, 
-    img : ''
+    image : ''
 },
 {
     type : 'Sweet crepes',
     name : 'Nutella and Bananas', 
     price : 12000, 
-    img : ''
+    image : ''
 },
 {
     type : 'Sweet crepes',
     name : 'Apple Cinnamon Brown Sugar ', 
     price : 12000, 
-    img : ''
+    image : ''
 }, 
 {
     type : 'Sweet crepes',
     name : 'Smores Nutella', 
     price : 12000, 
-    img : ''
+    image : ''
     
 },  
 {
     type : 'Savory crepes',
     name : 'Cheese', 
     price : 12000, 
-    img : ''
+    image : ''
 },
 {
     type : 'Savory crepes',
     name : 'Ham and Cheese', 
     price : 12000, 
-    img : ''
+    image : ''
 }, 
 {
     type : 'Savory crepes',
     name : 'Chiken and cheese', 
     price : 12000, 
-    img : ''
+    image : ''
 }, 
 {
     type : 'Savory crepes',
     name : 'Thon', 
     price : 12000, 
-    img : ''
+    image : ''
 },     
 ]
 var restos=[{name:'baguette & baguette',id:0,adresse:'menzeh 6',menu:sandwiches,category:'sandwiches', 
-img : '../IMG/restaurant/baguette.jpg'},
+image : '../IMG/restaurant/baguette.jpg'},
 {name:'paradice',id:1,adresse:'lac ',menu:iceCream,category:'ice cream', 
-img : ''},
+image : ''},
 {name:'fruit land',id:2,adresse:'Ariana ',menu:jus,category:'jus', 
-img : ''},
+image : ''},
 {name:'popolare',id:3,adresse:'Nasr',menu:pizza,category:'pizza', 
-img : ''},
+image : ''},
 {name:'Crepe Factory',id:4,adresse:'menzeh 9',menu:Crepe,category:'crepe', 
-img : ''}]
+image : ''}]
 function each(coll, f) {
     if (Array.isArray(coll)) {
       for (var i = 0; i < coll.length; i++) {
@@ -341,10 +341,10 @@ $('#0').click( function(e){
    var name=element.name;
    
     var res=[];
-    res.push(name)
-    res.push(element.price)
+    res.push([name])
+    res.push([element.price])
     
-    res.push('x',count)
+    res.push(['x'],[count])
                 localStorage[i]=[res]
 
 count=count+1
@@ -354,10 +354,10 @@ count=count+1
     var name=element.name;
    
     var res=[];
-    res.push(name)
-    res.push(element.price)
+    res.push([name])
+    res.push([element.price])
     
-    res.push('x',count)
+    res.push(['x'],[count])
                 localStorage[i]=[res]
 
 count=count+1
@@ -392,10 +392,10 @@ $('#1').click( function(e){
                 var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -405,10 +405,10 @@ $('#1').click( function(e){
                  var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -436,10 +436,10 @@ $('#1').click( function(e){
                     var name=element.name;
                     
                      var res=[];
-                     res.push(name)
-                     res.push(element.price)
+                     res.push([name])
+                     res.push([element.price])
                      
-                     res.push('x',count)
+                     res.push(['x'],[count])
                                  localStorage[i]=[res]
                  
                  count=count+1
@@ -449,10 +449,10 @@ $('#1').click( function(e){
                      var name=element.name;
                     
                      var res=[];
-                     res.push(name)
-                     res.push(element.price)
+                     res.push([name])
+                     res.push([element.price])
                      
-                     res.push('x',count)
+                     res.push(['x'],[count])
                                  localStorage[i]=[res]
                  
                  count=count+1
@@ -485,10 +485,10 @@ $('#3').click( function(e){
                 var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -498,10 +498,10 @@ $('#3').click( function(e){
                  var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -533,10 +533,10 @@ $('#4').click( function(e){
                 var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -546,10 +546,10 @@ $('#4').click( function(e){
                  var name=element.name;
                 
                  var res=[];
-                 res.push(name)
-                 res.push(element.price)
+                 res.push([name])
+                 res.push([element.price])
                  
-                 res.push('x',count)
+                 res.push(['x'],[count])
                              localStorage[i]=[res]
              
              count=count+1
@@ -572,51 +572,222 @@ $('#c0').click(function(){
     $('#back').css("display", "block");
     $('#categ').css("display", "none");
     $('#menuu').css("display", "block");
-each(sandwiches,function(e,i){
-    $('#menuu').append(`<h1>${e.name}</h1>`)
-    $('#menuu').append(`<h1>${e.price}</h1>`)
-    $('#menuu').append(`<img src=${e.image}>`)
+each(sandwiches,function(element,i){
+    $('#menuu').append(`<h1 >${element.name}</h1>`)
+    $('#menuu').append(`<h1>${element.price}</h1>`)
+    $('#menuu').append(`<img src=${element.image}>`)
+    $('#menuu').append(`<button id=p${i}>ajouter au panier</button>`)
+    var count =1
+    $(`#p${i}`).click(function (e){
+     
+        if(count===1){
+            var name=element.name;
+            
+             var res=[];
+             res.push([name])
+             res.push([element.price])
+             
+             res.push(['x'],[count])
+                         localStorage[i]=[res]
+         
+         count=count+1
+         
+           }
+           else if(count!==1){
+             var name=element.name;
+            
+             var res=[];
+             res.push([name])
+             res.push([element.price])
+             
+             res.push(['x'],[count])
+                         localStorage[i]=[res]
+         
+         count=count+1
+         
+           }
+            
+            
+          
+    })
 })
 })
+
 $('#c1').click(function(){
     $('#back').css("display", "block");
     $('#categ').css("display", "none");
     $('#menuu').css("display", "block");
-    each(iceCream,function(e,i){
-        $('#menuu').append(`<h1>${e.name}</h1>`)
-        $('#menuu').append(`<h1>${e.price}</h1>`)
-        $('#menuu').append(`<img src=${e.image}>`)
+    each(iceCream,function(element,i){
+        $('#menuu').append(`<h1 >${element.name}</h1>`)
+        $('#menuu').append(`<h1>${element.price}</h1>`)
+        $('#menuu').append(`<img src=${element.image}>`)
+        $('#menuu').append(`<button id=pp${i}>ajouter au panier</button>`)
+        var count =1
+        $(`#pp${i}`).click(function (e){
+         
+            if(count===1){
+                var name=element.name;
+                
+                 var res=[];
+                 res.push([name])
+                 res.push([element.price])
+                 
+                 res.push(['x'],[count])
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+               else if(count!==1){
+                 var name=element.name;
+                
+                 var res=[];
+                 res.push([name])
+                 res.push([element.price])
+                 
+                 res.push(['x'],[count])
+                             localStorage[i]=[res]
+             
+             count=count+1
+             
+               }
+                
+                
+              
+        })
     })
     })
     $('#c2').click(function(){
         $('#back').css("display", "block");
         $('#categ').css("display", "none");
         $('#menuu').css("display", "block");
-        each(jus,function(e,i){
+        each(jus,function(element,i){
             
-            $('#menuu').append(`<h1>${e.name}</h1>`)
-            $('#menuu').append(`<h1>${e.price}</h1>`)
-            $('#menuu').append(`<img src=${e.image}>`)
+            $('#menuu').append(`<h1 >${element.name}</h1>`)
+            $('#menuu').append(`<h1>${element.price}</h1>`)
+            $('#menuu').append(`<img src=${element.image}>`)
+            $('#menuu').append(`<button id=ppp${i}>ajouter au panier</button>`)
+            var count =1
+            $(`#ppp${i}`).click(function (e){
+             
+                if(count===1){
+                    var name=element.name;
+                    
+                     var res=[];
+                     res.push([name])
+                     res.push([element.price])
+                     
+                     res.push(['x'],[count])
+                                 localStorage[i]=[res]
+                 
+                 count=count+1
+                 
+                   }
+                   else if(count!==1){
+                     var name=element.name;
+                    
+                     var res=[];
+                     res.push([name])
+                     res.push([element.price])
+                     
+                     res.push(['x'],[count])
+                                 localStorage[i]=[res]
+                 
+                 count=count+1
+                 
+                   }
+                    
+                    
+                  
+            })
         })
         })
         $('#c3').click(function(){
             $('#back').css("display", "block");
             $('#categ').css("display", "none");
             $('#menuu').css("display", "block");
-            each(pizza,function(e,i){
-                $('#menuu').append(`<h1>${e.name}</h1>`)
-                $('#menuu').append(`<h1>${e.price}</h1>`)
-                $('#menuu').append(`<img src=${e.image}>`)
+            each(pizza,function(element,i){
+                $('#menuu').append(`<h1 >${element.name}</h1>`)
+                $('#menuu').append(`<h1>${element.price}</h1>`)
+                $('#menuu').append(`<img src=${element.image}>`)
+                $('#menuu').append(`<button id=pppp${i}>ajouter au panier</button>`)
+                var count =1
+                $(`#pppp${i}`).click(function (e){
+                 
+                    if(count===1){
+                        var name=element.name;
+                        
+                         var res=[];
+                         res.push([name])
+                         res.push([element.price])
+                         
+                         res.push(['x'],[count])
+                                     localStorage[i]=[res]
+                     
+                     count=count+1
+                     
+                       }
+                       else if(count!==1){
+                         var name=element.name;
+                        
+                         var res=[];
+                         res.push([name])
+                         res.push([element.price])
+                         
+                         res.push(['x'],[count])
+                                     localStorage[i]=[res]
+                     
+                     count=count+1
+                     
+                       }
+                        
+                        
+                      
+                })
             })
             })
             $('#c4').click(function(){
                 $('#back').css("display", "block");
                 $('#categ').css("display", "none");
                 $('#menuu').css("display", "block");
-                each(Crepe,function(e,i){
-                    $('#menuu').append(`<h1>${e.name}</h1>`)
-                    $('#menuu').append(`<h1>${e.price}</h1>`)
-                    $('#menuu').append(`<img src=${e.image}>`)
+                each(Crepe,function(element,i){
+                    $('#menuu').append(`<h1>${element.name}</h1>`)
+                    $('#menuu').append(`<h1>${element.price}</h1>`)
+                    $('#menuu').append(`<img src=${element.image}>`)
+                    $('#menuu').append(`<button id=ppppp${i}>ajouter au panier</button>`)
+                    var count =1
+                    $(`#ppppp${i}`).click(function (e){
+                     
+                        if(count===1){
+                            var name=element.name;
+                            
+                             var res=[];
+                             res.push([name])
+                             res.push([element.price])
+                             
+                             res.push(['x'],[count])
+                                         localStorage[i]=[res]
+                         
+                         count=count+1
+                         
+                           }
+                           else if(count!==1){
+                             var name=element.name;
+                            
+                             var res=[];
+                             res.push([name])
+                             res.push([element.price])
+                             
+                             res.push(['x'],[count])
+                                         localStorage[i]=[res]
+                         
+                         count=count+1
+                         
+                           }
+                            
+                            
+                          
+                    })
                 })
                 })
 
@@ -629,46 +800,64 @@ $('#backe').click(function(){
     $('#back').css("display", "none");
    })
 
-   var keys=Object.keys(localStorage) 
    var values=Object.values(localStorage)
+   var cart=[]
    
-   var count=0
-each(values,function(e,i){ 
-    var res=e.split(',')
+each(localStorage,function(e,i){ 
+  
+  
+    var s=e.toString()
+    var res=s.split(',')
+ if(res[0]===undefined || res[2]===undefined){
+ }
+ else{
 $('#cart').append(`<h1 id=h${i}>${res[0]}</h1>`) 
 $('#cart').append(`<h2 id=hh${i}>${res[1]}</h2>`) 
-$('#cart').append(`<h2 id=hh${i}>${res[2]+res[3]}</h2>`)
+$('#cart').append(`<h2 id=hhh${i}>${res[2]+res[3]}</h2>`)
 $('#cart').append(`<button id=s${i}>remove</button>`)
-console.log(i)
 
-console.log(res)
-$(`#s${i}`).click(function (e){
+    $(`#s${i}`).click(function (){
+        if(res[3]*1>1){
+        res[3]=(res[3]*1)-1
+        $(`#hhh${i}`).empty()
+        $(`#hhh${i}`).append(`<h2 id=hhh${i}>${res[2]+res[3]}</h2>`)
+
+  localStorage.setItem(i,res)
+        }
+        else if(res[3]*1===1 ){
+            $(`#hhh${i}`).css("display", "none");
+            $(`#hh${i}`).css("display", "none");
+            $(`#h${i}`).css("display", "none");
+            $(`#s${i}`).css("display", "none"); 
+        localStorage.removeItem(i)
+        }
     
-    if(i===0 || count===0){
-    keys.splice(i, 1)
+    })
+  }
 
-    values.splice(i, 1)
- 
-    $(`#h${i}`).css("display", "none");
-    $(`#hh${i}`).css("display", "none");
-    $(`#s${i}`).css("display", "none");
-    
-count=count+1    
-console.log('count===0',keys)   
-}
+})
 
-else if(count!==0){
-    keys.splice(i-1, 1)
-
-    values.splice(i-1, 1)
+$(`#total`).click(function(){
+    var total=0
    
-    $(`#h${i}`).css("display", "none");
-    $(`#hh${i}`).css("display", "none");
-    $(`#s${i}`).css("display", "none");
-    console.log('count!==0',keys)  
-}
+each(localStorage,function(e,i){
+    var s=e.toString()
+    var res=s.split(',')
+    if(res[0]===undefined || res[2]===undefined){
+    }
+else{   
+    total=total+(res[1]*1)*(res[3]*1)
+    console.log(total)
+    }
+    
 })
+$(`#all`).append(`<h2 >Total=${total}</h2>`)
+alert('total to pay is '+total)
 })
-  
 
+
+$(`#remove`).click(function(){
+    localStorage.clear()
+    $(`#cart`).css("display", "none");
+})
 
